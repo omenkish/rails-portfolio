@@ -18,8 +18,8 @@ puts '5 skills created'
 
 9.times do |portfolio_item|
   Portfolio.create!(
-    title: Faker::Lorem.sentence(word_count: 4),
-    subtitle: Faker::Lorem.sentence(word_count: 7),
+    title: Faker::Book.title,
+    subtitle: Faker::GreekPhilosophers.quote,
     body: Faker::Lorem.sentence(word_count: rand(20..50)),
     main_image: 'http://placehold.it/600x400',
     thumb_image: 'http://placehold.it/350x200'
