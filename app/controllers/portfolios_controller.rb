@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action :set_portfolio_item, only: %i[edit update show]
+  before_action :set_portfolio_item, only: %i[edit update show destroy]
   def index
     @portfolio_items = Portfolio.all
   end
@@ -26,10 +26,17 @@ class PortfoliosController < ApplicationController
   def update
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'Blog was successfully updated.' }
+        format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully updated.' }
       else
         format.html { render :edit }
       end
+    end
+  end
+
+  def destroy
+    @portfolio_item.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully deleted.' }
     end
   end
 
