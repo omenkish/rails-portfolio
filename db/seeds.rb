@@ -36,3 +36,9 @@ puts '5 skills created'
 end
 
 puts '9 portfolio items created'
+
+%w[Python GraphQL SQL Rails MERN].each do |technology_item|
+  Portfolio.last.technologies.create!(name: technology_item)
+end
+
+puts '5 technologies created'
