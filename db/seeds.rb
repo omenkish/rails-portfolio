@@ -1,7 +1,16 @@
+3.times do |topic|
+  Topic.create!(
+    title: "#{Faker::ProgrammingLanguage.name.capitalize} Programming Language"
+  )
+end
+
+puts '3 Topics created'
+
 10.times do |blog|
   Blog.create!(
     title: "My Blog Post Number #{blog + 1}",
-    body: Faker::Quotes::Shakespeare.hamlet_quote
+    body: Faker::Quotes::Shakespeare.hamlet_quote,
+    topic: Topic.last
   )
 end
 
@@ -27,3 +36,9 @@ puts '5 skills created'
 end
 
 puts '9 portfolio items created'
+
+%w[Python GraphQL SQL Rails MERN].each do |technology_item|
+  Portfolio.last.technologies.create!(name: technology_item)
+end
+
+puts '5 technologies created'
