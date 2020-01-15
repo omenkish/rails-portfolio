@@ -15,4 +15,8 @@ module ApplicationHelper
     greeting = "Thanks for visiting me from #{session[:source]} and you are on #{layout_name}"
     content_tag(:p, greeting, class: 'source-greeting')
   end
+
+  def copyright_generator
+    OmenkishViewTool::Renderer.copyright 'Eneojo Omede', 'All rights reserved'
+  end
 end
