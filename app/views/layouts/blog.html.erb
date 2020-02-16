@@ -76,11 +76,11 @@
 
     <!-- Start of container and row element -->
     <main role="main" class="container">
+      <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin)%>
       <div class="row">
         <div class="col-md-8 blog-main">
           <%= yield %>
 
-          <%= render 'shared/nav', location: 'bottom' %>
         </div>
 
         <aside class="col-md-4 blog-sidebar">
@@ -119,9 +119,13 @@
       </div>
     </main>
     <!-- End of container and row element -->
-    <%= login_helper %>
 
-
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
     <%= source_helper('blog') %>
   </body>
 </html>
