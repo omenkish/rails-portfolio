@@ -1,6 +1,6 @@
 class PortfolioUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
-  include Cloudinary::CarrierWave
+  include Cloudinary::CarrierWave if Rails.env.production?
 
   # Specify dimensions for images to resize to for appropriate display fit
   version :standard do
@@ -13,7 +13,6 @@ class PortfolioUploader < CarrierWave::Uploader::Base
 
   # Cloudinary will be utilized in production (Heroku) while local psql stored us utilized in development and testing environment.
   if Rails.env.production?
-    include Cloudinary::CarrierWave
     CarrierWave.configure do |config|
       config.cache_storage = :file
     end

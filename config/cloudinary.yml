@@ -16,3 +16,4 @@ test:
   api_secret: <%= ENV["CLOUDINARY_ID"] %>
   enhance_image_tag: true
   static_file_support: false
+  

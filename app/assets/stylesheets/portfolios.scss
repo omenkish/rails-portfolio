@@ -44,3 +44,16 @@ footer p {
 .main-image {
   width: 85%;
 }
+
+.thumb-image {
+  height: 225px;
+  width: 100%;
+  display: block;
+}
+
+.ellipses {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
