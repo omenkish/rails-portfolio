@@ -1,0 +1,19 @@
+development:
+  cloud_name: omenkish
+  api_key: <%= ENV["CLOUDINARY_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_ID"] %>
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: omenkish
+  api_key: <%= ENV["CLOUDINARY_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_ID"] %>
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: omenkish
+  api_key: <%= ENV["CLOUDINARY_KEY"] %>
+  api_secret: <%= ENV["CLOUDINARY_ID"] %>
+  enhance_image_tag: true
+  static_file_support: false
+  
