@@ -56,4 +56,14 @@ module ApplicationHelper
   def active? path
     'active' if current_page? path
   end
+
+  def alerts(title = 'Eneojo Portfolio')
+    alert = (flash[:alert] || flash[:error] || flash[:notice])
+
+    alert_generator(alert, title) if alert
+  end
+
+  def alert_generator(msg, title)
+    js add_gritter(msg, title: title, sticky: false)
+  end
 end

@@ -18,8 +18,6 @@
       <%= render 'shared/blog_card' %>
     </div>
 
-
-    <!-- Start of container and row element -->
     <main role="main" class="container">
       <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin)%>
       <div class="row">
@@ -30,12 +28,14 @@
 
         <aside class="col-md-4 blog-sidebar">
           <%= render 'shared/blog_sidebar'%>
-        </aside><!-- /.blog-sidebar -->
+        </aside>
       </div>
     </main>
-    <!-- End of container and row element -->
 
     <%= render 'shared/blog_footer' %>
+
+    <%= alerts("Eneojo Blog") %>
+
     <%= source_helper('blog') %>
   </body>
 </html>
