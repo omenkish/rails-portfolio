@@ -5,3 +5,13 @@
 
 <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
 <%= link_to 'Back', blogs_path %>
+
+<hr>
+
+<% unless current_user.is_a? GuestUser %>
+  <%= render 'comments/comments_form' %>
+<% end %>
+
+<div id="comments" class="<%= @blog.comments.any? ? 'scroll' : nil %>" data-blog-id="<%= @blog.id %>">
+  <%= render @blog.comments %>
+</div>
