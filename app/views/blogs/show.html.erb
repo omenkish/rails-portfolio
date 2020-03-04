@@ -12,6 +12,6 @@
   <%= render 'comments/comments_form' %>
 <% end %>
 
-<div id="comments" data-blog-id="<%= @blog.id %>">
+<div id="comments" class="<%= @blog.comments.any? ? 'scroll' : nil %>" data-blog-id="<%= @blog.id %>">
   <%= render @blog.comments %>
 </div>
