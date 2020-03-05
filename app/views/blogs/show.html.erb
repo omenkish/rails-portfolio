@@ -1,6 +1,6 @@
-
 <h3><%= @blog.title %></h3>
 
+<%= @blog.topic.title %>
 <p><%= @blog.body %></p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
