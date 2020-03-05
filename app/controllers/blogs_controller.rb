@@ -18,6 +18,8 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    return handle_redirect unless grant_blog_access?
+
     @blog = Blog.includes(:comments).friendly.find(params[:id])
     @comment = Comment.new
 
@@ -79,13 +81,21 @@ class BlogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blog = Blog.friendly.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_params
-      params.require(:blog).permit(:title, :body)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def blog_params
+    params.require(:blog).permit(:title, :body)
+  end
+
+  def grant_blog_access?
+    logged_in?(:site_admin) || @blog.published?
+  end
+
+  def handle_redirect
+    redirect_to blogs_path, notice: 'You are not authorised to access this page'
+  end
 end
