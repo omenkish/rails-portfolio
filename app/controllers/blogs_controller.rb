@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
-  before_action :set_side_bar_topics, only: %i[index show new]
+  before_action :set_side_bar_topics, only: %i[index show new edit]
   layout 'blog'
 
   access all: [:show, :index], user: { except: [:destroy, :new, :create, :update, :edit, :toggle_status] }, site_admin: :all
@@ -89,7 +89,7 @@ class BlogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:title, :body, :topic_id)
+    params.require(:blog).permit(:title, :body, :topic_id, :status)
   end
 
   def grant_blog_access?
