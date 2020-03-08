@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy toggle_status]
+  before_action :set_side_bar_topics, only: %i[index show new]
   layout 'blog'
 
   access all: [:show, :index], user: { except: [:destroy, :new, :create, :update, :edit, :toggle_status] }, site_admin: :all
@@ -97,5 +98,9 @@ class BlogsController < ApplicationController
 
   def handle_redirect
     redirect_to blogs_path, notice: 'You are not authorised to access this page'
+  end
+
+  def set_side_bar_topics
+    @sidebar_topics = Topic.with_blogs
   end
 end
