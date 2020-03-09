@@ -113,37 +113,59 @@ h1, h2, h3, h4, h5, h6 {
  * Custom styles
  */
 
- .social-links {
-   li {
-     padding: 8px;
+.social-links {
+  li {
+    padding: 8px;
 
-     a {
-       color: black;
-     }
-   }
- }
+    a {
+      color: black;
+    }
+  }
+}
 
- .comment-card {
-   .card {
-     margin-top: 15px;
+.comment-card {
+  .card {
+    margin-top: 15px;
 
-     .card-text {
-       .comment-footer {
-         font-size: .8em;
-         font-style: italic;
+    .card-text {
+      .comment-footer {
+        font-size: .8em;
+        font-style: italic;
 
-         .comment-name {
-           font-weight: bold;
-         }
-       }
-     }
-   }
- }
- .scroll { 
+        .comment-name {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.scroll { 
   background-color: #F5F5F5; 
   width: 100%; 
   height: 600px; 
   overflow-x: hidden; 
   overflow-y: auto;
   padding: 20px;
+}
+
+.blogcrumb {
+  a {
+    font-size: 1.25em;
+    margin: 0 10px 0 10px;
   }
+}
+.fa-trash {
+  color: red;
+}
+
+.fa-toggle-on {
+  color: black;
+}
+
+.fa-toggle-off {
+  color: darkgray;
+}
+
+.fa-pencil-square-o {
+  color: grey;
+}

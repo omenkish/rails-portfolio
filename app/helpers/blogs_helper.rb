@@ -25,4 +25,10 @@ module BlogsHelper
     markdown_to_html = Redcarpet::Markdown.new(coderayfied, options)
     markdown_to_html.render(text).html_safe
   end
+
+  def blog_status_color blog
+    return fa_icon('toggle-off') if blog.published?
+
+    fa_icon('toggle-on')
+  end
 end
