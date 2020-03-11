@@ -1,18 +1,21 @@
-<div class="nav-scroller py-1 mb-2">
-  <nav class="nav d-flex justify-content-between">
-    <%= nav_helper('p-2 text-muted', 'span') %>
-    <%= login_helper 'p-2 text-muted' %>
-    <%# <a class="p-2 text-muted" href="#">World</a>
-    <a class="p-2 text-muted" href="#">U.S.</a>
-    <a class="p-2 text-muted" href="#">Technology</a>
-    <a class="p-2 text-muted" href="#">Design</a>
-    <a class="p-2 text-muted" href="#">Culture</a>
-    <a class="p-2 text-muted" href="#">Business</a>
-    <a class="p-2 text-muted" href="#">Politics</a>
-    <a class="p-2 text-muted" href="#">Opinion</a>
-    <a class="p-2 text-muted" href="#">Science</a>
-    <a class="p-2 text-muted" href="#">Health</a>
-    <a class="p-2 text-muted" href="#">Style</a>
-    <a class="p-2 text-muted" href="#">Travel</a> %>
-  </nav>
-</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top nav-class">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+          <%= link_to 'Eneojo Omede', root_path, class: 'blog-header-logo text-dark' %>
+      </div>
+
+      <div class="col-md-6">
+        <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse float-right nav-helper" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <%= nav_helper('nav-link', 'li') %>
+            <%= login_helper('nav-link') %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

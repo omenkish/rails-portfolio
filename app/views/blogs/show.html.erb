@@ -12,10 +12,10 @@
   <% end %>
 </nav>
 
-<h3><%= @blog.title %></h3>
+<h3 class="text-center"><%= @blog.title %></h3>
 
 <%= @blog.topic.title %>
-<p><%= markdown @blog.body %></p>
+<p class="text-justify"><%= markdown @blog.body %></p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
 <%= link_to 'Back', blogs_path %>
@@ -29,3 +29,4 @@
 <div id="comments" class="<%= @blog.comments.any? ? 'scroll' : nil %>" data-blog-id="<%= @blog.id %>">
   <%= render @blog.comments %>
 </div>
+

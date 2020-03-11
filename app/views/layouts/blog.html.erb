@@ -11,32 +11,10 @@
   </head>
 
   <body>
+    <%= render 'shared/blog_nav' %>
     <div class="container">
-      <%= render 'shared/blog_masthead' %>
-      <%= render 'shared/blog_nav' %>
-      <%= render 'shared/blog_jumbotron' %>
-      <%= render 'shared/blog_card' %>
+      <%= yield %>
     </div>
-
-    <main role="main" class="container">
-      <p>
-        <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
-      </p>
-      <p>
-        <%= link_to 'Topics', topics_path %>
-      </p>
-      <div class="row">
-        <div class="col-md-8 blog-main">
-          <%= yield %>
-
-        </div>
-
-        <aside class="col-md-4 blog-sidebar">
-          <%= render 'shared/blog_sidebar'%>
-        </aside>
-      </div>
-    </main>
-
     <%= render 'shared/blog_footer' %>
 
     <%= alerts("Eneojo Blog") %>
