@@ -11,7 +11,7 @@ class PortfolioUploader < CarrierWave::Uploader::Base
     resize_to_fit(50, 50)
   end
 
-  # Cloudinary will be utilized in production (Heroku) while local psql stored us utilized in development and testing environment.
+  # Cloudinary will be utilized in production (Heroku) while local psql stored is utilized in development and testing environment.
   if Rails.env.production?
     CarrierWave.configure do |config|
       config.cache_storage = :file
