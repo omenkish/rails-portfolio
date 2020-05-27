@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9c67cbe-17d6-44a2-bda2-8537ed2ba43a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/helpers/pages_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/pages_helper.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/pages/tech_news.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/tech_news.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/social_tool.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/social_tool.rb" afterDir="false" />
@@ -180,7 +182,7 @@
       <workItem from="1588861776485" duration="356000" />
       <workItem from="1588870108818" duration="371000" />
       <workItem from="1588885717360" duration="2000" />
-      <workItem from="1590578006341" duration="7416000" />
+      <workItem from="1590578006341" duration="9150000" />
     </task>
     <servers />
   </component>

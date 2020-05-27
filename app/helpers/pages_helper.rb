@@ -19,7 +19,7 @@ module PagesHelper
     }ix
 
     tweet.gsub(regex) do |url|
-      "<a href=#{url} target='_blank' rel='noreferrer noopener'>#{url}</a>"
+      "<a href=#{url} target='_blank' rel='noreferrer noopener' class='tweet-url'>#{url}</a>"
     end.html_safe
   end
 end

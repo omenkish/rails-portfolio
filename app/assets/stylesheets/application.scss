@@ -158,3 +158,20 @@ body {
  .app-footer {
    color: whitesmoke;
  }
+
+.tech-news {
+  color: black;
+  margin: 20px;
+
+  .card {
+    padding: 16px;
+  }
+}
+
+.tweet-url {
+  color: #336699;
+  &:hover {
+    color: #730E15;
+    text-decoration: none;
+  }
+}
