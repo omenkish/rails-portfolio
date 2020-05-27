@@ -7,11 +7,12 @@ module ApplicationHelper
       (link_to 'Login', new_user_session_path, class: style)
   end
 
-  def source_helper(layout_name)
+  def source_helper(styles)
     return unless session[:source]
 
-    greeting = "Thanks for visiting me from #{session[:source]} and you are on #{layout_name}"
-    content_tag(:p, greeting, class: 'source-greeting')
+    greeting = "Thanks for visiting me from #{session[:source]}, please feel free
+      to #{link_to 'contact me', contact_path} if you'd like to work together."
+    content_tag(:div, greeting.html_safe, class: styles)
   end
 
   def copyright_generator

@@ -1,3 +1,22 @@
-<%= render @blogs %>
+<%= render 'shared/blog_jumbotron' %>
+<%= render 'shared/blog_card' %>
 
-<%= paginate @blogs %>
+<main role="main">
+  <p>
+    <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+  </p>
+  <p>
+    <%= link_to 'Topics', topics_path %>
+  </p>
+  <div class="row">
+    <div class="col-md-8 blog-main">
+      <%= render @blogs %>
+
+      <%= paginate @blogs %>
+    </div>
+
+    <aside class="col-md-4 blog-sidebar">
+      <%= render 'shared/blog_sidebar'%>
+    </aside>
+  </div>
+</main>

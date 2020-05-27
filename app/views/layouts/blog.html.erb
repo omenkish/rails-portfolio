@@ -5,37 +5,18 @@
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
-
+    <%= favicon_link_tag('favicons/favicon.ico') %>
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'shared/blog_nav' %>
     <div class="container">
-      <%= render 'shared/blog_masthead' %>
-      <%= render 'shared/blog_nav' %>
-      <%= render 'shared/blog_jumbotron' %>
-      <%= render 'shared/blog_card' %>
+      <%= yield %>
     </div>
-
-    <main role="main" class="container">
-      <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin)%>
-      <div class="row">
-        <div class="col-md-8 blog-main">
-          <%= yield %>
-
-        </div>
-
-        <aside class="col-md-4 blog-sidebar">
-          <%= render 'shared/blog_sidebar'%>
-        </aside>
-      </div>
-    </main>
-
     <%= render 'shared/blog_footer' %>
 
     <%= alerts("Eneojo Blog") %>
-
-    <%= source_helper('blog') %>
   </body>
 </html>

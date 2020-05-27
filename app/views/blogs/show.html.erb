@@ -1,7 +1,21 @@
+<nav aria-label="breadcrumb">
+  <section class="breadcrumb">
+    <%= link_to "Home", root_path, class: 'breadcrumb-item' %>
+    <%= link_to @blog.topic.title.capitalize, @blog.topic, class: 'breadcrumb-item' %>
+    <span class="breadcrumb-item active" aria-current="page"><%= @blog.title %></span>
+  </section>
+  <% if logged_in?(:site_admin) %>
+    <span class="float-md-right">
+      <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog) %>
+      <%= link_to fa_icon('trash'), @blog, method: :delete, data: { confirm: 'Are you sure you want to delete this blog?' } %>
+    </span>
+  <% end %>
+</nav>
 
-<h3><%= @blog.title %></h3>
+<h3 class="text-center"><%= @blog.title %></h3>
 
-<p><%= @blog.body %></p>
+<%= @blog.topic.title %>
+<p class="text-justify"><%= markdown @blog.body %></p>
 
 <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> |
 <%= link_to 'Back', blogs_path %>
@@ -15,3 +29,4 @@
 <div id="comments" class="<%= @blog.comments.any? ? 'scroll' : nil %>" data-blog-id="<%= @blog.id %>">
   <%= render @blog.comments %>
 </div>
+
