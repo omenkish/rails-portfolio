@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9c67cbe-17d6-44a2-bda2-8537ed2ba43a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/pages_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/pages_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/pages/tech_news.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/pages/tech_news.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/social_tool.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/social_tool.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/cable.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/cable.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,14 +227,18 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="341" y="175" key="SettingsEditor/0.23.1680.1027@0.23.1680.1027" timestamp="1588861753214" />
+    <state x="241" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590660757064">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="241" y="455" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.1027@0.23.1680.1027" timestamp="1590660757064" />
     <state x="505" y="248" key="run.anything.popup" timestamp="1588850520408">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state x="505" y="248" key="run.anything.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1588850520408" />
-    <state x="124" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1590588655500">
+    <state x="124" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1590660920339">
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
-    <state x="124" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1590588655500" />
+    <state x="124" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1590660920339" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/portfolio@Development__portfolio.rcov" NAME="Development: portfolio Coverage Results" MODIFIED="1590579087621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="portfolio" />
